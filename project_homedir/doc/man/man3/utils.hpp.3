@@ -1,0 +1,53 @@
+.TH "src/utils.hpp" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/utils.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SH "Typedef Documentation"
+.PP 
+.SS "using string =  const char *"
+
+.PP
+\fBWarning\fP
+.RS 4
+we will store it in heap 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void* checked_malloc (std::size_t size)"
+
+.PP
+Don't use \fCnew\fP/\fCdelete\fP(C++), \fCmalloc\fP/\fCcalloc\fP/\fCfree\fP(C) noticed that, we will allocate memory for struct with union member because of the uncertain size of union, the default constructor is deleted, so new cannot used to create an struct object which with union member\&.
+.PP
+for some reason, we do not use \fCnew\fP/\fCdelete\fP in all project code, and we will use checked_malloc forever instead of \fCmalloc\fP/\fCcalloc\fP, and we never use free because of garbage collector\&. (Reason can be found in textbook\&.)
+.PP
+\fBParameters\fP
+.RS 4
+\fIstd::size_t\fP the size will allocated 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+a \fCvoid *\fP pointer point to memory which is allocated by this call\&.
+.RE
+.PP
+In C++, memory allocator in <cstdlib> 
+.PP
+\fBWarning\fP
+.RS 4
+malloc will return NULL (C) or nullptr (C++>=11) 
+.RE
+.PP
+
+.SS "\fBstring\fP String (\fBstring\fP origin)"
+
+.PP
+string constructor 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.

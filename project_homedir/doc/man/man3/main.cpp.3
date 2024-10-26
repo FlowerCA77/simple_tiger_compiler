@@ -1,0 +1,81 @@
+.TH "src/SLP_interpreter/main.cpp" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/SLP_interpreter/main.cpp
+.SH SYNOPSIS
+.br
+.PP
+.SH "Function Documentation"
+.PP 
+.SS "void interp (\fBA_stm\fP s)"
+
+.PP
+the final SLP interpreter\&. 
+.SS "\fBIntAndTable_\fP interpExp (\fBA_exp\fP e, \fBTable_\fP t)"
+
+.PP
+interprete a exp e, and table t is the current state\&. 
+.SS "\fBIntAndTable_\fP interpExpList (\fBA_expList\fP el, \fBTable_\fP t)"
+
+.PP
+interprete a explist el, and table t is the current state\&. 
+.SS "\fBTable_\fP interpStm (\fBA_stm\fP s, \fBTable_\fP t)"
+
+.PP
+interprete a stm s, and table t is the current state\&. 
+.SS "int lookup (\fBTable_\fP t, \fBstring\fP key)"
+
+.PP
+find the identifier key's value in table t 
+.SS "int main ()"
+
+.SS "int maxargs (\fBA_stm\fP s)"
+
+.PP
+Count \fCprint\fP args number max\&. 
+.SS "template<typename T  = int> T min (T a, T b)"
+
+.SS "\fBA_stm\fP prog_generator (void)"
+
+.PP
+Example Tiger Code 1\&. 
+.SS "of SLP interpreter"
+.PP
+.nf
+a := 5+3; b := (print(a, a\-1), 10*a);
+print(b); print(c1);
+.fi
+.PP
+ 
+.SS "\fBA_stm\fP prog_generator2 (void)"
+
+.PP
+Example Tiger Code 2\&. 
+.PP
+.nf
+a := 5+3; b := (print(a, a\-1), 10*a); print(b);
+print(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10);
+
+.fi
+.PP
+ 
+.SS "\fBTable_\fP update (\fBTable_\fP t1, \fBstring\fP id2, int v2)"
+
+.PP
+update table t1 with new identifier id2 and value t2 
+.SS "void update_e (\fBA_exp\fP e, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in Exp 
+.SS "void update_el (\fBA_expList\fP el, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in ExpList 
+.SS "void update_s (\fBA_stm\fP s, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in Stm 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.

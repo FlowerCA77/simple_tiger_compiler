@@ -1,0 +1,9 @@
+tiger.tar
+tiger/
+project_homedir/doc/html/
+project_homedir/doc/latex/*
+!project_homedir/doc/latex/refman.pdf
+documents/*
+!documents/readme.md
+documents/*/
+.vscode/

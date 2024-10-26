@@ -1,0 +1,31 @@
+.TH "src/SLP_interpreter/grammar_interpreter.cpp" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/SLP_interpreter/grammar_interpreter.cpp
+.SH SYNOPSIS
+.br
+.PP
+.SH "Function Documentation"
+.PP 
+.SS "\fBA_stm\fP A_AssignStm (\fBstring\fP id, \fBA_exp\fP exp)"
+
+.SS "\fBA_stm\fP A_CompoundStm (\fBA_stm\fP stm1, \fBA_stm\fP stm2)"
+
+.SS "\fBA_exp\fP A_EseqExp (\fBA_stm\fP stm, \fBA_exp\fP exp)"
+
+.SS "\fBA_exp\fP A_IdExp (\fBstring\fP id)"
+
+.SS "\fBA_expList\fP A_LastExpList (\fBA_exp\fP last)"
+
+.SS "\fBA_exp\fP A_NumExp (int num)"
+
+.SS "\fBA_exp\fP A_OpExp (\fBA_exp\fP left, \fBA_binop\fP oper, \fBA_exp\fP right)"
+
+.SS "\fBA_expList\fP A_PairExpList (\fBA_exp\fP head, \fBA_expList\fP tail)"
+
+.SS "\fBA_stm\fP A_PrintStm (\fBA_expList\fP exps)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.

@@ -1,0 +1,63 @@
+.TH "A_stm_" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+A_stm_
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <grammar_interpreter\&.hpp>\fP
+.SS "Public Types"
+.SS "Data Fields"
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Stm \-> Stm; Stm
+Stm \-> id := Stm
+Stm \-> print(ExpList)
+
+.fi
+.PP
+ 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA_compoundStm \fP\fP
+.TP
+\fB\fIA_assignStm \fP\fP
+.TP
+\fB\fIA_printStm \fP\fP
+.SH "Field Documentation"
+.PP 
+.SS "struct  { \&.\&.\&. }  assign"
+
+.SS "struct  { \&.\&.\&. }  compound"
+
+.SS "\fBA_exp\fP exp"
+
+.SS "\fBA_expList\fP exps"
+
+.SS "\fBstring\fP id"
+
+.SS "enum  { \&.\&.\&. }  kind"
+
+.SS "struct  { \&.\&.\&. }  print"
+
+.SS "\fBA_stm\fP stm1"
+
+.SS "\fBA_stm\fP stm2"
+
+.SS "union  { \&.\&.\&. }  u"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.

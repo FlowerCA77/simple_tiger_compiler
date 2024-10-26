@@ -1,0 +1,68 @@
+.TH "A_exp_" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+A_exp_
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <grammar_interpreter\&.hpp>\fP
+.SS "Public Types"
+.SS "Data Fields"
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Exp \-> id
+Exp \-> num
+Exp \-> Exp Binop Exp
+Exp \-> (Stm, Exp)
+
+.fi
+.PP
+ 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA_idExp \fP\fP
+.TP
+\fB\fIA_numExp \fP\fP
+.TP
+\fB\fIA_opExp \fP\fP
+.TP
+\fB\fIA_eseqExp \fP\fP
+.SH "Field Documentation"
+.PP 
+.SS "struct  { \&.\&.\&. }  eseq"
+
+.SS "\fBA_exp\fP exp"
+
+.SS "\fBstring\fP id"
+
+.SS "enum  { \&.\&.\&. }  kind"
+
+.SS "\fBA_exp\fP left"
+
+.SS "int num"
+
+.SS "struct  { \&.\&.\&. }  op"
+
+.SS "\fBA_binop\fP oper"
+
+.SS "\fBA_exp\fP right"
+
+.SS "\fBA_stm\fP stm"
+
+.SS "union  { \&.\&.\&. }  u"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.

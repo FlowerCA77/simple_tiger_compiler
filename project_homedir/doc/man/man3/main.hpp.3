@@ -1,0 +1,64 @@
+.TH "src/SLP_interpreter/main.hpp" 3 "A simple tiger compiler" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/SLP_interpreter/main.hpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBint_and_table\fP"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "using IntAndTable_ =  \fBint_and_table\fP *"
+
+.SS "using Table_ =  \fBtable\fP *"
+\fCtable\fP and \fC\fBint_and_table\fP\fP are used to store identifiers\&.
+.br
+ A \fCtable\fP is used to store a stm and it's value\&.
+.br
+ A \fC\fBint_and_table\fP\fP is combines a table and a value, which is the expression's return value\&.
+.br
+ In fact, these tables are linked note list\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void interp (\fBA_stm\fP s)"
+
+.PP
+the final SLP interpreter\&. 
+.SS "\fBIntAndTable_\fP interpExp (\fBA_exp\fP e, \fBTable_\fP t)"
+
+.PP
+interprete a exp e, and table t is the current state\&. 
+.SS "\fBIntAndTable_\fP interpExpList (\fBA_exp\fP e, \fBTable_\fP t)"
+
+.SS "\fBTable_\fP interpStm (\fBA_stm\fP s, \fBTable_\fP t)"
+
+.PP
+interprete a stm s, and table t is the current state\&. 
+.SS "int maxargs (\fBA_stm\fP s)"
+
+.PP
+Count \fCprint\fP args number max\&. 
+.SS "\fBTable_\fP Table (\fBstring\fP id, int value, struct \fBtable\fP * tail)"
+
+.SS "void update_e (\fBA_exp\fP e, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in Exp 
+.SS "void update_el (\fBA_expList\fP el, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in ExpList 
+.SS "void update_s (\fBA_stm\fP s, int & count, int & history_max, bool & is_in_print, bool & is_out_print)"
+
+.PP
+update \fCcount\fP counter and \fChistory_max\fP record in Stm 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for A simple tiger compiler from the source code\&.
